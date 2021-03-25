@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Project</title>
+  </head>
+  <body>
+    <h1>Let Us Know About if You Are Satsified ?</h1>
+    <div class="container">
+      <a href="#active"><i class="fas fa-star"></i></a
+      ><a href="#active"><i class="fas fa-star"></i></a
+      ><a href="#active"><i class="fas fa-star"></i></a
+      ><a href="#active"><i class="fas fa-star"></i></a
+      ><a href="#active"><i class="fas fa-star"></i></a>
+    </div>
+    <div class="modal-container" id="active">
+      <div class="modal">
+        <div class="modal-header">
+          <h3>Review Satisfaction</h3>
+          <a href="#close"><i class="fas fa-times"></i></a>
+        </div>
+
+        <form>
+          <div>
+            <label for="name"> Name</label>
+            <input
+              autocomplete="off"
+              type="name"
+              placeholder="name"
+              id="name"
+            />
+          </div>
+          <div>
+            <label for="email">Your Email</label>
+            <input
+              autocomplete="off"
+              type="email"
+              placeholder="email"
+              id="email"
+            />
+          </div>
+          <div>
+            <label for="message">Your Message</label>
+            <textarea name="message" id="message" cols="30" rows="3"></textarea>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

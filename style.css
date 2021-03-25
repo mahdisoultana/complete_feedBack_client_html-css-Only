@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Architects Daughter", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(
+      150deg,
+      rgba(128, 0, 128, 0.496) 24%,
+      white 27% 65%,
+      rgba(46, 23, 46, 0.462) 72%
+    ),
+    url("https://images.unsplash.com/photo-1616618885543-379ceed8b007?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"),
+    no-repeat center center;
+  background-size: cover;
+}
+
+.fa-star {
+  font-size: 2.5rem;
+  color: transparent;
+  -webkit-text-stroke: 2px #333;
+  display: block;
+  transform: rotate(35deg);
+  transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s all;
+}
+a {
+  background-color: transparent;
+  border: none;
+  margin: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+.container {
+  transform: rotate(180deg);
+}
+a:hover i {
+  color: rgb(235, 212, 10);
+  font-size: 3.5rem;
+}
+
+a:hover i,
+a:focus i,
+a:hover ~ a i,
+a:focus ~ a i {
+  color: rgb(235, 212, 10);
+}
+/* Modal */
+.modal-container {
+  background-color: rgba(51, 51, 51, 0.363);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #eee;
+  box-shadow: 0 0 4px black;
+  transform: translate(-50%, -150%);
+}
+input,
+button[type="submit"],
+#message {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1.6rem;
+  box-shadow: 0 0 4px black;
+  cursor: pointer;
+  font-family: "Architects Daughter", cursive;
+  letter-spacing: 2px;
+}
+#message {
+  overflow: auto;
+  resize: none;
+}
+form {
+  text-align: left;
+  padding: 2rem;
+}
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+}
+button[type="submit"] {
+  margin-top: 2rem;
+  background-color: rgb(209, 140, 13);
+  color: white;
+  font-family: "Architects Daughter", cursive;
+}
+.modal-header {
+  padding: 1rem 0.5rem;
+  background-color: rgb(209, 140, 13);
+  color: white;
+  text-shadow: 1px 0px 3px black;
+  box-shadow: 0 1px 4px black;
+}
+.modal-header a {
+  position: absolute;
+  right: 1rem;
+  top: -0.5rem;
+  display: inline-block;
+  color: red;
+  background-color: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.modal-header a:hover i {
+  font-size: 1.6rem;
+}
+a:hover,
+button:hover {
+  opacity: 0.7;
+}
+h1 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+h3 {
+  letter-spacing: 2px;
+}
+:target {
+  animation: activeModalContainer 1s forwards;
+}
+:target .modal {
+  animation: activeModal 2s forwards;
+}
+@keyframes activeModalContainer {
+  from {
+    z-index: -1;
+    opacity: 0;
+  }
+  to {
+    z-index: 10;
+    opacity: 1;
+  }
+}
+@keyframes activeModal {
+  from {
+    transform: translate(-50%, -150%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -55%);
+    opacity: 1;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 65%;
+  }
+}
